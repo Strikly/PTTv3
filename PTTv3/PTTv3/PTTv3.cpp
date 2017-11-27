@@ -31,13 +31,8 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-
-// Menu Draft: Rachel
-void intro()
-=======
 void intro() //Written by Rachel
->>>>>>> d0b4ff43cf8a747d0810b2169c06dcb2c47dfe9e
+
 {
 	const int coin = 233;
 	const int bomb = 235;
@@ -58,7 +53,7 @@ void intro() //Written by Rachel
 	cout << "Watch out for those bombs, and Good Luck!" << endl;
 	cout << endl;
 
-	system("CLS");
+	//system("CLS");
 
 	char selection;
 

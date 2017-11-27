@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+<<<<<<< HEAD
+Debug|x64|C:\Users\jstemeye\Documents\GitHub\PTTv3\PTTv3\|
+=======
 Debug|x64|C:\Users\radams26938\Documents\GitHub\PTTv3\PTTv3\|
+>>>>>>> d0b4ff43cf8a747d0810b2169c06dcb2c47dfe9e

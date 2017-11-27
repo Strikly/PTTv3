@@ -1,4 +1,4 @@
-//<<<<<<< HEAD
+
 // PTTs2.cpp : Defines the entry point for the console application.
 // Jared Stemeye
 // Rachel Adams
@@ -20,7 +20,7 @@
 //potentially bombs moving with every user move
 //text file: saving player names and scores in a text file, old school arcade style high score list
 
-//>>>>>>> 32827cde7b4869d6ef7e63a1117233ce607e5383
+
 #include "stdafx.h"
 #include <iostream>
 #include <string>
@@ -31,9 +31,13 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 
 // Menu Draft: Rachel
 void intro()
+=======
+void intro() //Written by Rachel
+>>>>>>> d0b4ff43cf8a747d0810b2169c06dcb2c47dfe9e
 {
 	const int coin = 233;
 	const int bomb = 235;
@@ -53,6 +57,46 @@ void intro()
 	cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
 	cout << "Watch out for those bombs, and Good Luck!" << endl;
 	cout << endl;
+
+	system("CLS");
+
+	char selection;
+
+	cout << setw(60) << "The Maze" << endl; //centered and bigger text, to add later. 
+	cout << setw(62) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
+	cout << "Press 1 to Start the Maze" << endl;
+	cout << "Press 2 to view High Scores" << endl;
+	cout << "Press 3" << endl; //maybe include this in black text or text to match the background, easter egg of a graphic and a meme song?
+	cin >> selection;
+
+	if (selection == '1')
+	{
+		cout << "You Have Chosen Option 1!" << endl;
+		system("CLS");
+		
+	}
+
+	if (selection == '2')
+	{
+		cout << "You Have Chosen Option 2!" << endl;
+		//view high score file
+
+		
+	}
+
+	if (selection == '3')
+	{
+
+		//cout << "3";
+		//memeing it, memeing it so hard
+	}
+
+	if (selection != '1' && selection != '2' && selection != '3')
+	{
+		cout << "That doesn't work, pick a valid option." << endl;
+		system("CLS");
+	}
+
 }
 
 // displayBoard (Jared and Adam)

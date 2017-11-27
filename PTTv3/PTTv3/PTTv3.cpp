@@ -36,32 +36,14 @@ void intro() //Written by Rachel
 {
 	const int coin = 233;
 	const int bomb = 235;
-	cout << "Welcome to The Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
-	cout << "Maybe, maybe not." << endl;
-	cout << "You see, there will be obstacles in your way, ones that might be invisible. Well, yeah, they're invisible." << endl;
-	cout << "They're bombs." << endl;
-	cout << "Oops." << endl;
-	cout << (char)bomb << " " << (char)bomb << " " << (char)bomb << " " << (char)bomb << " " << (char)bomb << " " << (char)bomb << endl;
-	cout << "The good news though, is that there are non-invisible coins to make your journey worthwhile." << endl;
-	cout << "For every coin you collect, 100 points are added to your score." << endl;
-	cout << (char)coin << " " << (char)coin << " " << (char)coin << " " << (char)coin << " " << (char)coin << " " << (char)coin << endl;
-	cout << "Speaking of scores, taking less steps can also help you out. Make a lot of unnessary moves and your score" << endl;
-	cout << "might not be as high as you'd like it. Be efficient and collect your coins and you might just find your name" << endl;
-	cout << "on our high score list.";
-	cout << endl;
-	cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
-	cout << "Watch out for those bombs, and Good Luck!" << endl;
-	cout << endl;
-
-	//system("CLS");
-
 	char selection;
 
 	cout << setw(60) << "The Maze" << endl; //centered and bigger text, to add later. 
 	cout << setw(62) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
-	cout << "Press 1 to Start the Maze" << endl;
-	cout << "Press 2 to view High Scores" << endl;
-	cout << "Press 3" << endl; //maybe include this in black text or text to match the background, easter egg of a graphic and a meme song?
+	cout << setw(68) << "Press 1 to Start the Maze" << endl;
+	cout << setw(69) << "Press 2 to view High Scores" << endl;
+	cout << setw(74) << "Press 3 to view Intro and Instructions" << endl;
+	cout << setw(59) << "Press 4" << endl; //maybe include this in black text or text to match the background, easter egg of a graphic and a meme song?
 	cin >> selection;
 
 	if (selection == '1')
@@ -76,20 +58,45 @@ void intro() //Written by Rachel
 		cout << "You Have Chosen Option 2!" << endl;
 		//view high score file
 
-		
 	}
 
 	if (selection == '3')
+	{
+		cout << "Welcome to The Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
+		cout << "Maybe, maybe not." << endl;
+		cout << "You see, there will be obstacles in your way, ones that might be invisible. Well, yeah, they're invisible." << endl;
+		cout << "They're bombs." << endl;
+		cout << "Oops." << endl;
+		cout << (char)bomb << " " << (char)bomb << " " << (char)bomb << " " << (char)bomb << " " << (char)bomb << " " << (char)bomb << endl;
+		cout << "The good news though, is that there are non-invisible coins to make your journey worthwhile." << endl;
+		cout << "For every coin you collect, 100 points are added to your score." << endl;
+		cout << (char)coin << " " << (char)coin << " " << (char)coin << " " << (char)coin << " " << (char)coin << " " << (char)coin << endl;
+		cout << "Speaking of scores, taking less steps can also help you out. Make a lot of unnessary moves and your score" << endl;
+		cout << "might not be as high as you'd like it. Be efficient and collect your coins and you might just find your name" << endl;
+		cout << "on our high score list.";
+		cout << endl;
+		cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
+		cout << "Watch out for those bombs, and Good Luck!" << endl;
+		cout << endl;
+
+		cout << setw(68) << "Press 1 to Start the Maze" << endl;
+		cout << setw(69) << "Press 2 to view High Scores" << endl;
+		cout << setw(74) << "Press 3 to view Intro and Instructions" << endl;
+		cout << setw(59) << "Press 4" << endl;
+		cin >> selection;
+	}
+
+	if (selection == '4')
 	{
 
 		//cout << "3";
 		//memeing it, memeing it so hard
 	}
 
-	if (selection != '1' && selection != '2' && selection != '3')
+	if (selection != '1' && selection != '2' && selection != '3' && selection != '4')
 	{
 		cout << "That doesn't work, pick a valid option." << endl;
-		system("CLS");
+		cin >> selection;
 	}
 
 }

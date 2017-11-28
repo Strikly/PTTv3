@@ -217,6 +217,7 @@ int main()
 	const int cols = 5;
 	int mineNum = 2;
 	
+	// Parallel arrays build. Jared.
 	char bombBoard[rows][cols] = {
 		{ '  ' , '  ' , '  ' , '  ', '  ' },
 		{ '  ' , '  ' , '  ' , '  ', '  ' },
@@ -236,6 +237,7 @@ int main()
 	board[2][2] = (char)coin;
 	board[r][c] = (char)player;
 
+	//Game mechanics. Jared and Adam.
 	while (contP && lives > 0 && nextLevel == 1)
 	{
 		
@@ -351,7 +353,7 @@ int main()
 			lives--;
 			cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 		}
-		if (moveCount <= 0)
+		if (moveCount <= -1)
 		{
 			cout << "You ran out and moves and lost a limb. " << endl;
 			lives--;

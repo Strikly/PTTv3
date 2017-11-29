@@ -703,7 +703,7 @@ int main()
 		cout << "Total Points: " << points << endl;
 		cout << "Mine Count: " << mineNum3 << endl;
 
-		displayBoard2(rows3, cols3, board3);
+		displayBoard3(rows3, cols3, board3);
 
 		cout << moveCount << " moves left. enter a move: ";
 		cin >> input;

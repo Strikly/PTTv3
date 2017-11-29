@@ -397,21 +397,29 @@ int main()
 		{
 			cout << "You hit a Wall." << endl;
 			r++;
+			board[r][c] = (char)player;
+			board[r - 1][c] = '  ';
 		}
 		while (c <= -1)
 		{
 			cout << "You hit a Wall." << endl;
 			c++;
+			board[r][c] = (char)player;
+			board[r][c - 1] = '  ';
 		}
 		while (r >= rows)
 		{
 			cout << "You hit a Wall." << endl;
 			r--;
+			board[r][c] = (char)player;
+			board[r + 1][c] = '  ';
 		}
 		while (c >= rows)
 		{
 			cout << "You hit a Wall." << endl;
 			c--;
+			board[r][c] = (char)player;
+			board[r][c + 1] = '  ';
 		}
 
 	}

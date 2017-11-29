@@ -213,10 +213,12 @@ int main()
 	//===================================== Level 1 ========================================================================== Coded by Jared, Adam and Rachel.
 	moveCount = 15;
 	int r = 0, c = 0;
+	int mineNum = 2;
 	const int rows = 5;
 	const int cols = 5;
-	int mineNum = 2;
-	
+	int arraySize = rows*cols;
+		
+	// Parallel arrays build. Jared.
 	char bombBoard[rows][cols] = {
 		{ '  ' , '  ' , '  ' , '  ', '  ' },
 		{ '  ' , '  ' , '  ' , '  ', '  ' },
@@ -224,8 +226,7 @@ int main()
 		{ '  ' , '  ' , '  ' , '  ', '  ' },
 		{ 'x' , '  ' , '  ' , '  ', (char)exit }
 	};
-
-	int arraySize = rows*cols;
+		
 	char board[rows][cols] = {
 		{ '  ' , '  ' , '  ' , '  ', '  ' },
 		{ '  ' , '  ' , '  ' , '  ', '  ' },
@@ -236,6 +237,7 @@ int main()
 	board[2][2] = (char)coin;
 	board[r][c] = (char)player;
 
+	//Game mechanics. Jared and Adam.
 	while (contP && lives > 0 && nextLevel == 1)
 	{
 		
@@ -351,7 +353,7 @@ int main()
 			lives--;
 			cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 		}
-		if (moveCount <= 0)
+		if (moveCount <= -1)
 		{
 			cout << "You ran out and moves and lost a limb. " << endl;
 			lives--;
@@ -364,7 +366,6 @@ int main()
 			{
 				c--;
 			}
-			moveCount = 15;
 			nextLevel++;
 		}
 		for (int i = 0; i < arraySize; i++)
@@ -382,7 +383,6 @@ int main()
 				{
 					c--;
 				}
-				moveCount = 15;
 				nextLevel++;
 			}
 			else
@@ -395,52 +395,66 @@ int main()
 		{
 			cout << "You hit a Wall." << endl;
 			r++;
+			board[r][c] = (char)player;
+			board[r - 1][c] = '  ';
 		}
 		while (c <= -1)
 		{
 			cout << "You hit a Wall." << endl;
 			c++;
+			board[r][c] = (char)player;
+			board[r][c - 1] = '  ';
 		}
 		while (r >= rows)
 		{
 			cout << "You hit a Wall." << endl;
 			r--;
+			board[r][c] = (char)player;
+			board[r + 1][c] = '  ';
 		}
 		while (c >= rows)
 		{
 			cout << "You hit a Wall." << endl;
 			c--;
+			board[r][c] = (char)player;
+			board[r][c + 1] = '  ';
 		}
 
 	}
 	//=================================================== Level 2 ==========================================================
+	moveCount = 20;	
+	int mineNum2 = 4;
 	const int rows2 = 6;
 	const int cols2 = 6;
+	int arraySize2 = rows2 * cols2;
+	
+	char bombBoard2[rows2][cols2] = {
+		{ '  ' , '  ' , '  ' , '  ', '  ' , 'c' },
+		{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
+		{ '  ' , '  ' , '  ' , '  ', 'x' , '  ' },
+		{ '  ' , 'c' , 'x' , 'c', '  ' , '  ' },
+		{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
+		{ '  ' , 'x' , '  ' , '  ', 'x' , (char)exit }
+	};
+	
+	char board2[rows2][cols2] = {
+		{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
+		{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
+		{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
+		{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
+		{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
+		{ '  ' , '  ' , '  ' , '  ', '  ' , (char)exit }
+	};		
+
+	board2[0][5] = (char)coin;
+	board2[3][1] = (char)coin;
+	board2[3][3] = (char)coin;
+	board2[r][c] = (char)player;
 	while (contP && lives > 0 && nextLevel == 2)
 	{
-		cout << "Level " << nextLevel << endl;
-		int arraySize = rows2*cols2;
-		char board2[rows2][cols2] = {
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , (char)exit }
-		};
-
-		char bombBoard2[rows2][cols2] = {
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , '  ' },
-			{ '  ' , '  ' , '  ' , '  ', '  ' , (char)exit }
-		};
-
-		board2[2][2] = (char)coin;
-		board2[r][c] = (char)player;
-
+		cout << "LEVEL " << nextLevel << endl;
+		cout << "Total Points: " << points << endl;
+		cout << "Mine Count: " << mineNum2 << endl;		
 
 		displayBoard2(rows2, cols2, board2);
 
@@ -456,12 +470,19 @@ int main()
 			board2[r - 1][c] = '  ';
 			moveCount--;
 			points += 10;
-			if (bombBoard2[r][c] == ' x ')
+			if (bombBoard2[r][c] == 'x')
 			{
 				lives--;
-				cout << "you hit a mine! limb lost! " << endl << lives << " left! " << endl;
+				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
+				bombBoard2[r][c] = 'd';
 			}
-			cout << "total points: " << points << endl;
+			if (bombBoard2[r][c] == 'c')
+			{
+				cout << "Coin acquired!" << endl;
+				points = points + 100;
+				bombBoard2[r][c] = 'n';
+				board2[r][c] = (char)player;
+			}
 		}
 		else if (input == 'w' || input == 'w')
 		{
@@ -471,12 +492,19 @@ int main()
 			board2[r + 1][c] = '  ';
 			moveCount--;
 			points += 10;
-			if (bombBoard2[r][c] == ' x ')
+			if (bombBoard2[r][c] == 'x')
 			{
 				lives--;
-				cout << "you hit a mine! limb lost! " << endl << lives << " left! " << endl;
+				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
+				bombBoard2[r][c] = 'd';
 			}
-			cout << "total points: " << points << endl;
+			if (bombBoard2[r][c] == 'c')
+			{
+				cout << "Coin acquired!" << endl;
+				points = points + 100;
+				bombBoard2[r][c] = 'n';
+				board2[r][c] = (char)player;
+			}
 		}
 		else if (input == 'd' || input == 'd')
 		{
@@ -486,12 +514,19 @@ int main()
 			board2[r][c - 1] = '  ';
 			moveCount--;
 			points += 10;
-			if (bombBoard2[r][c] == ' x ')
+			if (bombBoard2[r][c] == 'x')
 			{
 				lives--;
-				cout << "you hit a mine! limb lost! " << endl << lives << " left! " << endl;
+				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
+				bombBoard2[r][c] = 'd';
 			}
-			cout << "total points: " << points << endl;
+			if (bombBoard2[r][c] == 'c')
+			{
+				cout << "Coin acquired!" << endl;
+				points = points + 100;
+				bombBoard2[r][c] = 'n';
+				board2[r][c] = (char)player;
+			}
 		}
 		else if (input == 'a' || input == 'a')
 		{
@@ -501,12 +536,19 @@ int main()
 			board2[r][c + 1] = '  ';
 			moveCount--;
 			points += 10;
-			if (bombBoard2[r][c] == ' x ')
+			if (bombBoard2[r][c] == 'x')
 			{
 				lives--;
-				cout << "you hit a mine! limb lost! " << endl << lives << " left! " << endl;
+				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
+				bombBoard2[r][c] = 'd';
 			}
-			cout << "total points: " << points << endl;
+			if (bombBoard2[r][c] == 'c')
+			{
+				cout << "Coin acquired!" << endl;
+				points = points + 100;
+				bombBoard2[r][c] = 'n';
+				board2[r][c] = (char)player;
+			}
 		}
 		else if (input == 'p' || input == 'p')
 		{
@@ -514,13 +556,12 @@ int main()
 		}
 		else
 		{
-			cout << "invalid input. " << endl;
-			cout << "total points: " << points << endl;
+			cout << "Invalid input. " << endl;			
 		}
-		if (bombBoard2[r][c] == ' x ')
+		if (bombBoard2[r][c] == 'x')
 		{
 			lives--;
-			cout << "you hit a mine! limb lost! " << endl << lives << " left! " << endl;
+			cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 		}
 		if (moveCount <= 0)
 		{
@@ -535,12 +576,13 @@ int main()
 			{
 				c--;
 			}
-			moveCount = 15;
+			
 			nextLevel++;
 		}
-		for (int i = 0; i < arraySize; i++)
+		// Exit Level Loop - Adam
+		for (int i = 0; i < arraySize2; i++)
 		{
-			if (board2[r][c] == board2[rows - 1][cols - 1])
+			if (board2[r][c] == board2[rows2 - 1][cols2 - 1])
 			{
 				system("cls");
 				cout << "You reached the exit. On to the next level. " << endl;
@@ -553,12 +595,40 @@ int main()
 				{
 					c--;
 				}
-				moveCount = 15;
 				nextLevel++;
 			}
 			else
 			{
 
+			}
+			// Out of Bounds Checks. Adam.
+			while (r <= -1)
+			{
+				cout << "You hit a Wall." << endl;
+				r++;
+				board2[r][c] = (char)player;
+				board2[r - 1][c] = '  ';
+			}
+			while (c <= -1)
+			{
+				cout << "You hit a Wall." << endl;
+				c++;
+				board2[r][c] = (char)player;
+				board2[r][c - 1] = '  ';
+			}
+			while (r >= rows2)
+			{
+				cout << "You hit a Wall." << endl;
+				r--;
+				board2[r][c] = (char)player;
+				board2[r + 1][c] = '  ';
+			}
+			while (c >= rows2)
+			{
+				cout << "You hit a Wall." << endl;
+				c--;
+				board2[r][c] = (char)player;
+				board2[r][c + 1] = '  ';
 			}
 		}
 	}

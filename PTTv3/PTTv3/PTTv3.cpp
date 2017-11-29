@@ -28,6 +28,7 @@
 #include <iomanip>
 #include <fstream>
 #include <ctime>
+#include <windows.h>
 
 using namespace std;
 
@@ -310,7 +311,7 @@ int main()
 	const int exit = 175;
 	const int coin = 233;
 	int points = 0;
-	int lives = 3;
+	int lives = 10;
 	int moveCount;
 	int nextLevel = 1;
 
@@ -354,7 +355,7 @@ int main()
 		
 		cout << "LEVEL " << nextLevel << endl;
 		cout << "Total Points: " << points << endl;
-		cout << "Mine Count: " << mineNum << endl;
+		cout << "Limbs: " << lives << "    Mine Count: " << mineNum << endl;
 
 		displayBoard(rows, cols, board);
 		
@@ -464,11 +465,11 @@ int main()
 			lives--;
 			cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 		}
-		if (moveCount <= -1)
+		if (moveCount <= 0)
 		{
-			cout << "You ran out and moves and lost a limb. " << endl;
-			lives--;
-			cout << lives << " limbs left. On to the next level!!" << endl;
+			cout << "You ran out of moves! On to the next level!" << endl;
+			Sleep(2000);
+			system("CLS");
 			while (r > 0)
 			{
 				r--;
@@ -486,6 +487,8 @@ int main()
 				system("CLS");
 				cout << "You reached the Exit! On to the next level!. " << endl;
 				cout << "Total Points: " << points << endl;
+				Sleep(2000);
+				system("CLS");
 				while (r > 0)
 				{
 					r--;
@@ -565,7 +568,7 @@ int main()
 	{
 		cout << "LEVEL " << nextLevel << endl;
 		cout << "Total Points: " << points << endl;
-		cout << "Mine Count: " << mineNum2 << endl;		
+		cout << "Limbs: " << lives << "    Mine Count: " << mineNum2 << endl;
 
 		displayBoard2(rows2, cols2, board2);
 
@@ -676,9 +679,9 @@ int main()
 		}
 		if (moveCount <= 0)
 		{
-			cout << "You ran out and moves and lost a limb. " << endl;
-			lives--;
-			cout << lives << " limbs left. On to the next level!" << endl;
+			cout << "You ran out of moves! On to the next level!" << endl;
+			Sleep(2000);
+			system("CLS");
 			while (r > 0)
 			{
 				r--;
@@ -697,7 +700,9 @@ int main()
 			{
 				system("cls");
 				cout << "You reached the exit. On to the next level!. " << endl;
-				cout << "Total points: " << points << endl;
+				cout << "Total points: " << points << endl;				
+				Sleep(2000);
+				system("CLS");
 				while (r > 0)
 				{
 					r--;
@@ -771,16 +776,16 @@ int main()
 		{ '  ' , '  ' , '  ' , '  ', '  ', '  ' , (char)exit }
 	};
 
-	board3[2][5] = (char)coin;
-	board3[3][3] = (char)coin;
-	board3[4][1] = (char)coin;
-	board3[7][4] = (char)coin;
+	board3[1][4] = (char)coin;
+	board3[2][2] = (char)coin;
+	board3[3][0] = (char)coin;
+	board3[6][3] = (char)coin;
 	board3[r][c] = (char)player;
 	while (contP && lives > 0 && nextLevel == 3)
 	{
 		cout << "LEVEL " << nextLevel << endl;
 		cout << "Total Points: " << points << endl;
-		cout << "Mine Count: " << mineNum3 << endl;
+		cout << "Limbs: " << lives << "    Mine Count: " << mineNum3 << endl;
 
 		displayBoard3(rows3, cols3, board3);
 
@@ -891,9 +896,9 @@ int main()
 		}
 		if (moveCount <= 0)
 		{
-			cout << "You ran out and moves and lost a limb. " << endl;
-			lives--;
-			cout << lives << " limbs left. On to the next level!" << endl;
+			cout << "You ran out of moves! On to the next level!" << endl;
+			Sleep(2000);
+			system("CLS");
 			while (r > 0)
 			{
 				r--;
@@ -913,6 +918,8 @@ int main()
 				system("cls");
 				cout << "You reached the exit. On to the next level!. " << endl;
 				cout << "Total points: " << points << endl;
+				Sleep(2000);
+				system("CLS");
 				while (r > 0)
 				{
 					r--;
@@ -988,17 +995,17 @@ int main()
 		{ '  ' , '  ' , '  ' , '  ', '  ', '  ' , '  ' , (char)exit }
 	};
 
-	board4[2][1] = (char)coin;
-	board4[2][8] = (char)coin;
-	board4[3][5] = (char)coin;
-	board4[7][2] = (char)coin;
-	board4[8][5] = (char)coin;
+	board4[1][0] = (char)coin;
+	board4[1][7] = (char)coin;
+	board4[2][4] = (char)coin;
+	board4[6][1] = (char)coin;
+	board4[7][4] = (char)coin;
 	board4[r][c] = (char)player;
 	while (contP && lives > 0 && nextLevel == 4)
 	{
 		cout << "LEVEL " << nextLevel << endl;
 		cout << "Total Points: " << points << endl;
-		cout << "Mine Count: " << mineNum4 << endl;
+		cout << "Limbs: " << lives << "    Mine Count: " << mineNum4 << endl;
 
 		displayBoard4(rows4, cols4, board4);
 
@@ -1109,9 +1116,9 @@ int main()
 		}
 		if (moveCount <= 0)
 		{
-			cout << "You ran out and moves and lost a limb. " << endl;
-			lives--;
-			cout << lives << " limbs left. On to the next level!" << endl;
+			cout << "You ran out of moves! On to the next level!" << endl;
+			Sleep(2000);
+			system("CLS");
 			while (r > 0)
 			{
 				r--;
@@ -1131,6 +1138,8 @@ int main()
 				system("cls");
 				cout << "You reached the exit. On to the next level!. " << endl;
 				cout << "Total points: " << points << endl;
+				Sleep(2000);
+				system("CLS");
 				while (r > 0)
 				{
 					r--;
@@ -1209,18 +1218,18 @@ int main()
 		{ '  ' , '  ' , '  ' , '  ', '  ', '  ' , '  ' , '  ' , (char)exit }
 	};
 
-	board5[1][7] = (char)coin;
-	board5[2][3] = (char)coin;
-	board5[5][2] = (char)coin;
-	board5[5][6] = (char)coin;
-	board5[7][8] = (char)coin;
-	board5[9][3] = (char)coin;
+	board5[0][6] = (char)coin;
+	board5[1][2] = (char)coin;
+	board5[4][1] = (char)coin;
+	board5[4][5] = (char)coin;
+	board5[6][7] = (char)coin;
+	board5[8][2] = (char)coin;
 	board5[r][c] = (char)player;
-	while (contP && lives > 0 && nextLevel == 4)
+	while (contP && lives > 0 && nextLevel == 5)
 	{
 		cout << "LEVEL " << nextLevel << endl;
 		cout << "Total Points: " << points << endl;
-		cout << "Mine Count: " << mineNum5 << endl;
+		cout << "Limbs: " << lives << "    Mine Count: " << mineNum5 << endl;
 
 		displayBoard5(rows5, cols5, board5);
 
@@ -1331,9 +1340,9 @@ int main()
 		}
 		if (moveCount <= 0)
 		{
-			cout << "You ran out and moves and lost a limb. " << endl;
-			lives--;
-			cout << lives << " limbs left. On to the next level!" << endl;
+			cout << "You ran out of moves!" << endl;
+			Sleep(2000);
+			system("CLS");
 			while (r > 0)
 			{
 				r--;
@@ -1351,8 +1360,10 @@ int main()
 			if (board5[r][c] == board5[rows5 - 1][cols5 - 1])
 			{
 				system("cls");
-				cout << "You reached the exit. On to the next level!. " << endl;
+				cout << "You reached the end with " << lives << " limbs attached!" << endl;
 				cout << "Total points: " << points << endl;
+				Sleep(2000);
+				system("CLS");
 				while (r > 0)
 				{
 					r--;
@@ -1400,7 +1411,8 @@ int main()
 	}
 
 
-	cout << endl << "You're done Buddy! " << endl;
+	cout << endl << "You're finished Buddy! " << endl;
+
 
 
 	system("pause");

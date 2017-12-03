@@ -27,7 +27,7 @@
 #include <stdlib.h>
 #include <iomanip>
 #include <fstream>
-#include <ctime>
+#include <vector>
 #include <windows.h>
 
 using namespace std;
@@ -314,13 +314,57 @@ int main()
 	int lives = 10;
 	int moveCount;
 	int nextLevel = 1;
-
 	int inc = 0;
+	// Borrowed ifstream variables from CIS150_FileReadingForGames by Prof. Moore. - Jared
+	ifstream fileUsers;
+	ifstream fileHighscores;
+	string usersFile = "Users.txt";
+	string highscoresFile = "Highscores.txt";
+	string user;
+	vector<string> usersList;
+	vector<int>    highscoresList;
 	char input;
-	char mine = 255;
 	bool contP = true;
+	fileUsers.open(usersFile);
+	fileHighscores.open(highscoresFile);
 
 	intro();
+
+	cout << setw(65) << "TOP HIGH SCORES:" << endl;
+	if (fileUsers)
+	{
+		while (fileUsers >> user)
+		{
+			//cout << user << endl;
+			usersList.push_back(user);
+		}
+		fileUsers.close();
+	}
+	else
+	{
+		cout << "Users.txt was not opened correctly" << endl;
+	}
+
+	if (fileHighscores)
+	{
+		while (fileHighscores >> points)
+		{
+			//cout << highscore << endl;
+			highscoresList.push_back(points);
+		}
+		fileUsers.close();
+	}
+	else
+	{
+		cout << "Highscores.txt was not opened correctly" << endl;
+	}
+
+
+	for (int i = 0; i < 5; i++)
+	{
+		cout << setw(53) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
+	}
+
 
 	//===================================== Level 1 ========================================================================== Coded by Jared, Adam and Rachel.
 	moveCount = 15;
@@ -1362,7 +1406,7 @@ int main()
 				system("cls");
 				cout << "You reached the end with " << lives << " limbs attached!" << endl;
 				cout << "Total points: " << points << endl;
-				Sleep(2000);
+				Sleep(4000);
 				system("CLS");
 				while (r > 0)
 				{

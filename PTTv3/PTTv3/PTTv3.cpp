@@ -32,6 +32,25 @@
 
 using namespace std;
 
+void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/software/taag/
+{
+	cout << R"(         _______  _________  _         _______     _______   _______   _______    _______  
+	(       ) \__   __/ ( (    /| (  ____ \   (       ) (  ___  ) /  ___  )  ( ____  \ 
+	| () () |    ) (    |  \  ( | | (    \/   | () () | | (   ) | \/   )  |  | (    \/
+	| || || |    | |    |   \ | | | (__       | || || | | (___) |     /   )  | (__    
+	| |(_)| |    | |    | (\ \) | |  __)      | |(_)| | |  ___  |    /   /   |  __)   
+        | |   | |    | |    | | \   | | (         | |   | | | (   ) |   /   /    | (      
+	| )   ( | ___) (___ | )  \  | | (____/\   | )   ( | | )   ( |  /   (_/\  | (____/\ 
+	|/     \| \_______/ |/    )_) (_______/   |/     \| |/     \| (_______/  (_______/ )" << endl << endl;
+
+	cout << R"(                                          BY: 
+                                          RACHEL ADAMS
+                                          ADAM EVERETT
+                                          JARED STEMEYE)" << endl;
+	Sleep(4000);
+	system("cls");
+}
+
 void intro() //Written by Rachel
 
 {
@@ -327,6 +346,8 @@ int main()
 	bool contP = true;
 	fileUsers.open(usersFile);
 	fileHighscores.open(highscoresFile);
+
+	titleScreen();
 
 	intro();
 

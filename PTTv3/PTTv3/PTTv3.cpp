@@ -34,20 +34,30 @@ using namespace std;
 
 void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/software/taag/
 {
-	cout << R"(         _______  _________  _         _______     _______   _______   _______    _______  
-	(       ) \__   __/ ( (    /| (  ____ \   (       ) (  ___  ) /  ___  )  ( ____  \ 
-	| () () |    ) (    |  \  ( | | (    \/   | () () | | (   ) | \/   )  |  | (    \/
-	| || || |    | |    |   \ | | | (__       | || || | | (___) |     /   )  | (__    
-	| |(_)| |    | |    | (\ \) | |  __)      | |(_)| | |  ___  |    /   /   |  __)   
-        | |   | |    | |    | | \   | | (         | |   | | | (   ) |   /   /    | (      
-	| )   ( | ___) (___ | )  \  | | (____/\   | )   ( | | )   ( |  /   (_/\  | (____/\ 
-	|/     \| \_______/ |/    )_) (_______/   |/     \| |/     \| (_______/  (_______/ )" << endl << endl;
+	system("Color 89");
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << 
+	R"(                   _______  _________  _         _______     _______   _______   _______    _______  
+	          (       ) \__   __/ ( (    /| (  ____ \   (       ) (  ___  ) /  ___  )  ( ____  \ 
+	          | () () |    ) (    |  \  ( | | (    \/   | () () | | (   ) | \/   )  |  | (    \/
+	          | || || |    | |    |   \ | | | (__       | || || | | (___) |     /   )  | (__    
+	          | |(_)| |    | |    | (\ \) | |  __)      | |(_)| | |  ___  |    /   /   |  __)   
+                  | |   | |    | |    | | \   | | (         | |   | | | (   ) |   /   /    | (      
+	          | )   ( | ___) (___ | )  \  | | (____/\   | )   ( | | )   ( |  /   (_/\  | (____/\ 
+	          |/     \| \_______/ |/    )_) (_______/   |/     \| |/     \| (_______/  (_______/ )" << endl << endl;
 
-	cout << R"(                                          BY: 
-                                          RACHEL ADAMS
-                                          ADAM EVERETT
-                                          JARED STEMEYE)" << endl;
-	Sleep(4000);
+	cout << R"(                                                      BY: 
+                                                      RACHEL ADAMS
+                                                      ADAM EVERETT
+                                                      JARED STEMEYE)" << endl;
+	Sleep(3500);
 	system("cls");
 }
 
@@ -58,19 +68,22 @@ void intro() //Written by Rachel
 	const int bomb = 235;
 	char selection;
 
+	system("Color 08");
+	cout << endl;
 	cout << setw(66) << "Welcome To The Maze" << endl; //centered and bigger text, to add later. 
+	cout << endl;
 	cout << setw(62) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
 	cout << setw(68) << "Press 1 to Start the Maze" << endl;
 	cout << setw(69) << "Press 2 to view High Scores" << endl;
 	cout << setw(74) << "Press 3 to view Intro and Instructions" << endl;
-	cout << setw(59) << "Press 4" << endl; //maybe include this in black text or text to match the background, easter egg of a graphic and a meme song?
 	cin >> selection;
+	cout << endl;
 
 	if (selection == '1')
 	{
 		cout << "You Have Chosen Option 1!" << endl;
+		Sleep(1000);
 		system("CLS");
-		
 	}
 
 	if (selection == '2')
@@ -101,10 +114,6 @@ void intro() //Written by Rachel
 		cout << "Watch out for those bombs, and Good Luck!" << endl;
 		cout << endl;
 
-		cout << setw(68) << "Press 1 to Start the Maze" << endl;
-		cout << setw(69) << "Press 2 to view High Scores" << endl;
-		cout << setw(74) << "Press 3 to view Intro and Instructions" << endl;
-		cout << setw(59) << "Press 4" << endl;
 		cin >> selection;
 	}
 

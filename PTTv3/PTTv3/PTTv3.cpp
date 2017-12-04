@@ -351,12 +351,13 @@ int main()
 
 	intro();
 
+	int savedPoints = points;
+
 	cout << setw(65) << "TOP HIGH SCORES:" << endl;
 	if (fileUsers)
 	{
 		while (fileUsers >> user)
 		{
-			//cout << user << endl;
 			usersList.push_back(user);
 		}
 		fileUsers.close();
@@ -368,10 +369,9 @@ int main()
 
 	if (fileHighscores)
 	{
-		while (fileHighscores >> points)
+		while (fileHighscores >> savedPoints)
 		{
-			//cout << highscore << endl;
-			highscoresList.push_back(points);
+			highscoresList.push_back(savedPoints);
 		}
 		fileUsers.close();
 	}

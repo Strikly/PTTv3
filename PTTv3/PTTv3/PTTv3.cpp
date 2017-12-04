@@ -58,7 +58,7 @@ void intro() //Written by Rachel
 	const int bomb = 235;
 	char selection;
 
-	cout << setw(60) << "The Maze" << endl; //centered and bigger text, to add later. 
+	cout << setw(66) << "Welcome To The Maze" << endl; //centered and bigger text, to add later. 
 	cout << setw(62) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
 	cout << setw(68) << "Press 1 to Start the Maze" << endl;
 	cout << setw(69) << "Press 2 to view High Scores" << endl;

@@ -89,6 +89,7 @@ void intro() //Written by Rachel
 		cout << setw(68) << "Press 1 to Start the Maze" << endl;
 		cout << setw(69) << "Press 2 to view High Scores" << endl;
 		cout << setw(74) << "Press 3 to view Intro and Instructions" << endl;
+		cout << setw(74) << "Press P to Exit the Program at any time." << endl;
 		cin >> selection;
 		cout << endl;
 
@@ -395,13 +396,26 @@ int main()
 	int inc = 0;
 	char input;
 	bool contP = true;
+	ifstream fileUsers;
+	ifstream fileHighscores;
+	string usersFile = "Users.txt";
+	string highscoresFile = "Highscores.txt";
+	vector<string> usersList;
+	vector<int>    highscoresList;
+	ofstream outFileUsers("Users.txt", ios::app);
+	ofstream outFileUsers2("Highscores.txt", ios::app);
+	string inputUsername;
+	string user;
+	
 
 	titleScreen();
 
-	intro();
-
+	while (sel == 0)
+	{
+		contP = true;
+		intro();
+	}
 	
-
 
 	//===================================== Level 1 ========================================================================== Coded by Jared, Adam and Rachel.
 	while (contP && sel == 1)
@@ -1492,11 +1506,26 @@ int main()
 				}
 			}
 		}
+		
+		int savedPoints = points;
 
+		while (sel == 1)
+		{
+			cout << "Your score was: " << points << " points." << endl;
+			cout << "Enter your initials: ";
+			cin >> inputUsername;
+			usersList.push_back(inputUsername);
+			highscoresList.push_back(savedPoints);
+			nextLevel++;
+			sel = 0;
+		}
+
+		nextLevel = 1;
 	}
 
-	cout << endl << "You're finished Buddy! " << endl;
 
+	
+	cout << endl << "You're finished Buddy! " << endl << endl;
 
 
 	system("pause");

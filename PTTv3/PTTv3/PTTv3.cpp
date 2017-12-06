@@ -10,10 +10,10 @@
 // to their life counter. Finishing the first level will allow the user to move On to the next level!, where the size of the
 // maze and number of items increases.
 
-
+//Notes:
 //10 levels in difficulty, more bombs and more coins, set bomb spawn points per level so we have a kay map to use
 //level 1: 5x5 maze, 2 bombs, 1 coin
-//level 2: exponential increaming, number of bombs = number of coins, bomb ratio is 3 boms to 1 coin
+//level 2: exponential increasing, number of bombs = number of coins, bomb ratio is 3 boms to 1 coin
 //bombs are not displayed to user, but the number of bombs will be told to the user
 //pro level: coin surrounded by bombs except on one side, one way in one way out
 //potentially bombs moving with every user move
@@ -33,354 +33,17 @@ using namespace std;
 
 int points = 0;
 int sel = 0;
+bool contP = true;
 
-void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/software/taag/
-{
-	system("Color 89");
-
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout <<
-		R"(                   _______  _________  _         _______     _______   _______   _______    _______  
-	          (       ) \__   __/ ( (    /| (  ____ \   (       ) (  ___  ) /  ___  )  ( ____  \ 
-	          | () () |    ) (    |  \  ( | | (    \/   | () () | | (   ) | \/   )  |  | (    \/
-	          | || || |    | |    |   \ | | | (__       | || || | | (___) |     /   )  | (__    
-	          | |(_)| |    | |    | (\ \) | |  __)      | |(_)| | |  ___  |    /   /   |  __)   
-                  | |   | |    | |    | | \   | | (         | |   | | | (   ) |   /   /    | (      
-	          | )   ( | ___) (___ | )  \  | | (____/\   | )   ( | | )   ( |  /   (_/\  | (____/\ 
-	          |/     \| \_______/ |/    )_) (_______/   |/     \| |/     \| (_______/  (_______/ )" << endl << endl;
-
-	cout << R"(                                                      BY: 
-                                                      RACHEL ADAMS
-                                                      ADAM EVERETT
-                                                      JARED STEMEYE)" << endl;
-	Sleep(3500);
-	system("cls");
-}
-
-void intro() //Written by Rachel
-
-{
-	// Borrowed ifstream variables from CIS150_FileReadingForGames by Prof. Moore. - Jared
-	ifstream fileUsers;
-	ifstream fileHighscores;
-	string usersFile = "Users.txt";
-	string highscoresFile = "Highscores.txt";
-	string user;
-	vector<string> usersList;
-	vector<int>    highscoresList;
-	const int coin = 233;
-	const int bomb = 235;
-	char selection;
-
-	while (sel == 0)
-	{
-		system("Color 89");
-		cout << endl;
-		cout << setw(69) << "Welcome To The Maze" << endl; //centered and bigger text, to add later. 
-		cout << endl;
-		cout << setw(65) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
-		cout << setw(71) << "Press 1 to Start the Maze" << endl;
-		cout << setw(72) << "Press 2 to View High Scores" << endl;
-		cout << setw(77) << "Press 3 to View Intro and Instructions" << endl;
-		cout << setw(77) << "Press P to Exit The Program At Any Time" << endl;
-		cin >> selection;
-		cout << endl;
-
-		if (selection == '1')
-		{
-			cout << "You Have Chosen Option 1!" << endl;
-			Sleep(900);
-			system("CLS");
-			sel = 1;
-		}
-
-		if (selection == '2')
-		{
-			cout << "You Have Chosen Option 2!" << endl;
-			Sleep(900);
-			system("CLS");
-			fileUsers.open(usersFile);
-			fileHighscores.open(highscoresFile);
-			int savedPoints = points;
-
-			cout << setw(67) << "TOP HIGH SCORES:" << endl;
-			cout << endl;
-			if (fileUsers)
-			{
-				while (fileUsers >> user)
-				{
-					usersList.push_back(user);
-				}
-				fileUsers.close();
-			}
-			else
-			{
-				cout << "Users.txt did not open correctly" << endl;
-			}
-
-			if (fileHighscores)
-			{
-				while (fileHighscores >> savedPoints)
-				{
-					highscoresList.push_back(savedPoints);
-				}
-				fileUsers.close();
-			}
-			else
-			{
-				cout << "Highscores.txt did not open correctly" << endl;
-			}
-
-
-			for (int i = 0; i < 5; i++)
-			{
-				cout << setw(56) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
-			}
-		}
-
-		if (selection == '3')
-		{
-			cout << "Welcome to The Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
-			cout << "Maybe, maybe not." << endl;
-			cout << "You see, there will be obstacles in your way, ones that might be invisible. Well, yeah, they're invisible." << endl;
-			cout << "They're bombs. " << (char)bomb << endl;
-			cout << "Oops." << endl;
-			cout << endl;
-			cout << "The good news though, is that there are non-invisible coins to make your journey worthwhile." << endl;
-			cout << "For every coin you collect, 100 points are added to your score. " << (char)coin << endl;
-			cout << endl;
-			cout << "Speaking of scores, taking less steps can also help you out. Make a lot of unnessary moves and your score" << endl;
-			cout << "might not be as high as you'd like it. Be efficient and collect your coins and you might just find your name" << endl;
-			cout << "on our high score list.";
-			cout << endl;
-			cout << endl;
-			cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
-			cout << endl;
-			cout << "Watch out for those bombs, and Good Luck!" << endl;
-			cout << endl;
-
-			cin >> selection;
-		}
-
-		if (selection == '9')
-		{
-			//cout << "3";
-			//memeing it, memeing it so hard
-		}
-
-		while (selection != '1' && selection != '2' && selection != '3' && selection != '9')
-		{
-			cout << "That doesn't work, pick a valid option." << endl;
-			cin >> selection;
-		}
-	}
-
-}
-
-// displayBoard (Jared and Adam)
-void displayBoard(int rows, int cols, char board[5][5])
-{
-	const int wall = 178;
-	for (int i = 0; i < (rows + 26); i++)
-	{
-		cout << (char)wall;
-	}
-	for (int i = 0; i < rows; i++)
-	{
-		// cell divider
-		cout << endl << (char)wall;
-		for (int j = 0; j < cols; j++)
-		{
-			cout << " _" << board[i][j] << "_ ";
-			if (j < (cols - 1))
-			{
-				cout << "|";
-			}
-		}
-		if (i != rows - 1)
-		{
-			cout << (char)wall;
-		}
-		else
-		{
-			//cout << " _ ";
-		}
-	}
-	cout << endl;
-	for (int i = 0; i < (rows + 26); i++)
-	{
-		cout << (char)wall;
-	}
-	cout << endl;
-}
-
-// displayBoard (Pasted and edited by Jared) 
-void displayBoard2(int rows, int cols, char board[6][6])
-{
-	const int wall = 178;
-	for (int i = 0; i < (rows + 31); i++)
-	{
-		cout << (char)wall;
-	}
-	for (int i = 0; i < rows; i++)
-	{
-		// cell divider
-		cout << endl << (char)wall;
-		for (int j = 0; j < cols; j++)
-		{
-			cout << " _" << board[i][j] << "_ ";
-			if (j < (cols - 1))
-			{
-				cout << "|";
-			}
-		}
-		if (i != rows - 1)
-		{
-			cout << (char)wall;
-		}
-		else
-		{
-			//cout << " _ ";
-		}
-	}
-	cout << endl;
-	for (int i = 0; i < (rows + 31); i++)
-	{
-		cout << (char)wall;
-	}
-	cout << endl;
-}
-// displayBoard (Pasted and edited by Jared) 
-void displayBoard3(int rows, int cols, char board[7][7])
-{
-	const int wall = 178;
-	for (int i = 0; i < (rows + 36); i++)
-	{
-		cout << (char)wall;
-	}
-	for (int i = 0; i < rows; i++)
-	{
-		// cell divider
-		cout << endl << (char)wall;
-		for (int j = 0; j < cols; j++)
-		{
-			cout << " _" << board[i][j] << "_ ";
-			if (j < (cols - 1))
-			{
-				cout << "|";
-			}
-		}
-		if (i != rows - 1)
-		{
-			cout << (char)wall;
-		}
-		else
-		{
-			//cout << " _ ";
-		}
-	}
-	cout << endl;
-	for (int i = 0; i < (rows + 36); i++)
-	{
-		cout << (char)wall;
-	}
-	cout << endl;
-}
-
-//Display board pasted and edited by Rachel (11/29/2017)
-void displayBoard4(int rows, int cols, char board[8][8])
-{
-	const int wall = 178;
-	for (int i = 0; i < (rows + 41); i++)
-	{
-		cout << (char)wall;
-	}
-	for (int i = 0; i < rows; i++)
-	{
-		// cell divider
-		cout << endl << (char)wall;
-		for (int j = 0; j < cols; j++)
-		{
-			cout << " _" << board[i][j] << "_ ";
-			if (j < (cols - 1))
-			{
-				cout << "|";
-			}
-		}
-		if (i != rows - 1)
-		{
-			cout << (char)wall;
-		}
-		else
-		{
-			//cout << " _ ";
-		}
-	}
-	cout << endl;
-	for (int i = 0; i < (rows + 41); i++)
-	{
-		cout << (char)wall;
-	}
-	cout << endl;
-}
-//Display board pasted and edited by Rachel (11/29/2017)
-void displayBoard5(int rows, int cols, char board[9][9])
-{
-	const int wall = 178;
-	for (int i = 0; i < (rows + 46); i++)
-	{
-		cout << (char)wall;
-	}
-	for (int i = 0; i < rows; i++)
-	{
-		// cell divider
-		cout << endl << (char)wall;
-		for (int j = 0; j < cols; j++)
-		{
-			cout << " _" << board[i][j] << "_ ";
-			if (j < (cols - 1))
-			{
-				cout << "|";
-			}
-		}
-		if (i != rows - 1)
-		{
-			cout << (char)wall;
-		}
-		else
-		{
-			//cout << " _ ";
-		}
-	}
-	cout << endl;
-	for (int i = 0; i < (rows + 46); i++)
-	{
-		cout << (char)wall;
-	}
-	cout << endl;
-}
-
-// Move Functions (Adam and Jared)
-
-int downLeft(int move)
-{
-	move = move + 1;
-	return move;
-
-}
-
-int upRight(int move)
-{
-	move = move - 1;
-	return move;
-}
+void titleScreen();
+void intro();
+void displayBoard(int rows, int cols, char board[5][5]);
+void displayBoard2(int rows, int cols, char board[6][6]);
+void displayBoard3(int rows, int cols, char board[7][7]);
+void displayBoard4(int rows, int cols, char board[8][8]);
+void displayBoard5(int rows, int cols, char board[9][9]);
+int downLeft(int move);
+int upRight(int move);
 
 int main()
 {
@@ -1511,25 +1174,474 @@ int main()
 		
 		int savedPoints = points;
 
-		while (sel == 1)
-		{
-			cout << "Your score was: " << points << " points." << endl;
-			cout << "Enter your initials: ";
-			cin >> inputUsername;
-			usersList.push_back(inputUsername);
-			highscoresList.push_back(savedPoints);
-			nextLevel++;
-			sel = 0;
-		}
+		
+		cout << "Your score was: " << points << " points." << endl;
+		cout << "Enter your initials: ";
+		cin >> inputUsername;
+
+		outFileUsers << endl << inputUsername;
+		outFileUsers2 << endl << savedPoints;
+
+		usersList.push_back(inputUsername);
+		highscoresList.push_back(savedPoints);
+		nextLevel++;
+		
+
 
 		nextLevel = 1;
+		intro();
+
 	}
 
-
+	outFileUsers.close();
+	outFileUsers2.close();
 	
 	cout << endl << "You're finished Buddy! " << endl << endl;
 
 
 	system("pause");
 	return 0;
+}
+
+void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/software/taag/
+{
+	system("Color 89");
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout <<
+		R"(                   _______  _________  _         _______     _______   _______   _______    _______  
+	          (       ) \__   __/ ( (    /| (  ____ \   (       ) (  ___  ) /  ___  )  ( ____  \ 
+	          | () () |    ) (    |  \  ( | | (    \/   | () () | | (   ) | \/   )  |  | (    \/
+	          | || || |    | |    |   \ | | | (__       | || || | | (___) |     /   )  | (__    
+	          | |(_)| |    | |    | (\ \) | |  __)      | |(_)| | |  ___  |    /   /   |  __)   
+                  | |   | |    | |    | | \   | | (         | |   | | | (   ) |   /   /    | (      
+	          | )   ( | ___) (___ | )  \  | | (____/\   | )   ( | | )   ( |  /   (_/\  | (____/\ 
+	          |/     \| \_______/ |/    )_) (_______/   |/     \| |/     \| (_______/  (_______/ )" << endl << endl;
+
+	cout << R"(                                                      BY: 
+                                                      RACHEL ADAMS
+                                                      ADAM EVERETT
+                                                      JARED STEMEYE)" << endl;
+	Sleep(3500);
+	system("cls");
+}
+
+void intro() //Written by Rachel
+
+{
+	// Borrowed ifstream variables from CIS150_FileReadingForGames by Prof. Moore. - Jared
+	ifstream fileUsers;
+	ifstream fileHighscores;
+	string usersFile = "Users.txt";
+	string highscoresFile = "Highscores.txt";
+	string user;
+	vector<string> usersList;
+	vector<int>    highscoresList;
+	const int coin = 233;
+	const int bomb = 235;
+	char selection;
+
+
+	while (contP && sel == 0)
+	{
+		system("Color 89");
+		cout << endl;
+		cout << setw(69) << "Welcome To The Maze" << endl; //centered and bigger text, to add later. 
+		cout << endl;
+		cout << setw(65) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
+		cout << setw(71) << "Press 1 to Start the Maze" << endl;
+		cout << setw(72) << "Press 2 to View High Scores" << endl;
+		cout << setw(77) << "Press 3 to View Intro and Instructions" << endl;
+		cout << setw(77) << "Press P to Exit The Program At Any Time" << endl;
+		cin >> selection;
+		cout << endl;
+
+		if (contP && selection == '1')
+		{
+			cout << "You Have Chosen Option 1!" << endl;
+			Sleep(900);
+			system("CLS");
+			sel = 1;
+		}
+
+		if (contP && selection == '2')
+		{
+			cout << "You Have Chosen Option 2!" << endl;
+			Sleep(900);
+			system("CLS");
+			fileUsers.open(usersFile);
+			fileHighscores.open(highscoresFile);
+			int savedPoints = points;
+
+			cout << setw(67) << "TOP HIGH SCORES:" << endl;
+			cout << endl;
+			if (fileUsers)
+			{
+				while (fileUsers >> user)
+				{
+					usersList.push_back(user);
+				}
+				fileUsers.close();
+			}
+			else
+			{
+				cout << "Users.txt did not open correctly" << endl;
+			}
+
+			if (fileHighscores)
+			{
+				while (fileHighscores >> savedPoints)
+				{
+					highscoresList.push_back(savedPoints);
+				}
+				fileUsers.close();
+			}
+			else
+			{
+				cout << "Highscores.txt did not open correctly" << endl;
+			}
+
+
+			for (int i = 0; i < 5; i++)
+			{
+				cout << setw(56) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
+			}
+		}
+
+		if (contP && selection == '3')
+		{
+			cout << "Welcome to The Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
+			cout << "Maybe, maybe not." << endl;
+			cout << "You see, there will be obstacles in your way, ones that might be invisible. Well, yeah, they're invisible." << endl;
+			cout << "They're bombs. " << (char)bomb << endl;
+			cout << "Oops." << endl;
+			cout << endl;
+			cout << "The good news though, is that there are non-invisible coins to make your journey worthwhile." << endl;
+			cout << "For every coin you collect, 100 points are added to your score. " << (char)coin << endl;
+			cout << endl;
+			cout << "Speaking of scores, taking less steps can also help you out. Make a lot of unnessary moves and your score" << endl;
+			cout << "might not be as high as you'd like it. Be efficient and collect your coins and you might just find your name" << endl;
+			cout << "on our high score list.";
+			cout << endl;
+			cout << endl;
+			cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
+			cout << endl;
+			cout << "Watch out for those bombs, and Good Luck!" << endl;
+			cout << endl;
+
+			cin >> selection;
+		}
+		else if (contP && sel == 'p' || sel == 'P');
+		{
+
+			contP = false;
+		}
+
+		if (contP && selection == '9')
+		{
+			//cout << "3";
+			//memeing it, memeing it so hard
+		}
+
+		while (contP && selection != '1' && selection != '2' && selection != '3' && selection != '9')
+		{
+			cout << "That doesn't work, pick a valid option." << endl;
+			cin >> selection;
+		}
+	}
+
+}
+
+// displayBoard (Jared and Adam)
+void displayBoard(int rows, int cols, char board[5][5])
+{
+	HANDLE  console;
+	console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	const int wall = 178;
+	for (int i = 0; i < (rows + 26); i++)
+	{
+		cout << (char)wall;
+	}
+	for (int i = 0; i < rows; i++)
+	{
+		// cell divider
+		cout << endl << (char)wall;
+		for (int j = 0; j < cols; j++)
+		{
+			if (board[i][j] == char(233))
+			{
+				
+				cout << " _";
+				SetConsoleTextAttribute(console, 142);
+				cout << board[i][j];
+				SetConsoleTextAttribute(console, 137);
+				cout << "_ ";
+				
+			}
+			else
+			{
+				cout << " _" << board[i][j] << "_ ";
+			}
+			
+			if (j < (cols - 1))
+			{
+				cout << "|";
+			}
+		
+		}
+		if (i != rows - 1)
+		{
+			cout << (char)wall;
+		}
+		else
+		{
+			//cout << " _ ";
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < (rows + 26); i++)
+	{
+		cout << (char)wall;
+	}
+	cout << endl;
+}
+
+// displayBoard2 (Pasted and edited by Jared) 
+void displayBoard2(int rows, int cols, char board[6][6])
+{
+	HANDLE  console;
+	console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	const int wall = 178;
+	for (int i = 0; i < (rows + 31); i++)
+	{
+		cout << (char)wall;
+	}
+	for (int i = 0; i < rows; i++)
+	{
+		// cell divider
+		cout << endl << (char)wall;
+		for (int j = 0; j < cols; j++)
+		{
+			if (board[i][j] == char(233))
+			{
+
+				cout << " _";
+				SetConsoleTextAttribute(console, 142);
+				cout << board[i][j];
+				SetConsoleTextAttribute(console, 137);
+				cout << "_ ";
+
+			}
+			else
+			{
+				cout << " _" << board[i][j] << "_ ";
+			}
+
+			if (j < (cols - 1))
+			{
+				cout << "|";
+			}
+
+		}
+		if (i != rows - 1)
+		{
+			cout << (char)wall;
+		}
+		else
+		{
+			//cout << " _ ";
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < (rows + 31); i++)
+	{
+		cout << (char)wall;
+	}
+	cout << endl;
+}
+// displayBoard3 (Pasted and edited by Jared) 
+void displayBoard3(int rows, int cols, char board[7][7])
+{
+	HANDLE  console;
+	console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	const int wall = 178;
+	for (int i = 0; i < (rows + 36); i++)
+	{
+		cout << (char)wall;
+	}
+	for (int i = 0; i < rows; i++)
+	{
+		// cell divider
+		cout << endl << (char)wall;
+		for (int j = 0; j < cols; j++)
+		{
+			if (board[i][j] == char(233))
+			{
+
+				cout << " _";
+				SetConsoleTextAttribute(console, 142);
+				cout << board[i][j];
+				SetConsoleTextAttribute(console, 137);
+				cout << "_ ";
+
+			}
+			else
+			{
+				cout << " _" << board[i][j] << "_ ";
+			}
+
+			if (j < (cols - 1))
+			{
+				cout << "|";
+			}
+
+		}
+		if (i != rows - 1)
+		{
+			cout << (char)wall;
+		}
+		else
+		{
+			//cout << " _ ";
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < (rows + 36); i++)
+	{
+		cout << (char)wall;
+	}
+	cout << endl;
+}
+
+//Display board pasted and edited by Rachel (11/29/2017)
+void displayBoard4(int rows, int cols, char board[8][8])
+{
+	HANDLE  console;
+	console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	const int wall = 178;
+	for (int i = 0; i < (rows + 41); i++)
+	{
+		cout << (char)wall;
+	}
+	for (int i = 0; i < rows; i++)
+	{
+		// cell divider
+		cout << endl << (char)wall;
+		for (int j = 0; j < cols; j++)
+		{
+			if (board[i][j] == char(233))
+			{
+
+				cout << " _";
+				SetConsoleTextAttribute(console, 142);
+				cout << board[i][j];
+				SetConsoleTextAttribute(console, 137);
+				cout << "_ ";
+
+			}
+			else
+			{
+				cout << " _" << board[i][j] << "_ ";
+			}
+
+			if (j < (cols - 1))
+			{
+				cout << "|";
+			}
+
+		}
+		if (i != rows - 1)
+		{
+			cout << (char)wall;
+		}
+		else
+		{
+			//cout << " _ ";
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < (rows + 41); i++)
+	{
+		cout << (char)wall;
+	}
+	cout << endl;
+}
+//Display board pasted and edited by Rachel (11/29/2017)
+void displayBoard5(int rows, int cols, char board[9][9])
+{
+	HANDLE  console;
+	console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	const int wall = 178;
+	for (int i = 0; i < (rows + 46); i++)
+	{
+		cout << (char)wall;
+	}
+	for (int i = 0; i < rows; i++)
+	{
+		// cell divider
+		cout << endl << (char)wall;
+		for (int j = 0; j < cols; j++)
+		{
+			if (board[i][j] == char(233))
+			{
+
+				cout << " _";
+				SetConsoleTextAttribute(console, 142);
+				cout << board[i][j];
+				SetConsoleTextAttribute(console, 137);
+				cout << "_ ";
+
+			}
+			else
+			{
+				cout << " _" << board[i][j] << "_ ";
+			}
+
+			if (j < (cols - 1))
+			{
+				cout << "|";
+			}
+
+		}
+		if (i != rows - 1)
+		{
+			cout << (char)wall;
+		}
+		else
+		{
+			//cout << " _ ";
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < (rows + 46); i++)
+	{
+		cout << (char)wall;
+	}
+	cout << endl;
+}
+
+// Move Functions (Adam and Jared)
+
+int downLeft(int move)
+{
+	move = move + 1;
+	return move;
+
+}
+
+int upRight(int move)
+{
+	move = move - 1;
+	return move;
 }

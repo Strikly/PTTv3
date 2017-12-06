@@ -1,114 +1,114 @@
 ﻿  PTTv3.cpp
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(171): warning C4390: ';': empty controlled statement found; is this the intent?
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(444): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(444): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(444): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(452): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(452): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(452): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(476): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(476): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(498): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(498): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(520): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(520): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(542): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(542): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(617): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(617): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(624): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(624): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(631): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(631): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(638): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(638): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(656): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(656): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(656): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(665): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(665): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(665): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(688): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(688): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(710): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(710): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(732): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(732): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(754): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(754): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(830): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(830): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(837): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(837): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(844): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(844): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(851): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(851): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(871): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(871): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(871): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(881): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(881): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(881): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(905): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(905): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(927): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(927): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(949): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(949): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(971): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(971): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1047): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1047): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1054): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1054): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1061): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1061): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1068): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1068): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1089): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1089): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1089): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1100): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1100): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1100): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1125): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1125): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1147): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1147): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1169): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1169): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1191): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1191): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1267): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1267): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1274): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1274): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1281): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1281): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1288): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1288): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1311): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1311): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1311): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1323): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1323): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1323): warning C4309: 'initializing': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1349): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1349): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1371): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1371): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1393): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1393): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1415): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1415): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1491): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1491): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1498): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1498): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1505): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1505): warning C4309: '=': truncation of constant value
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1512): warning C4305: '=': truncation from 'int' to 'char'
-c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1512): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(177): warning C4390: ';': empty controlled statement found; is this the intent?
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(450): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(450): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(450): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(458): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(458): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(458): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(482): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(482): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(504): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(504): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(526): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(526): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(548): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(548): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(623): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(623): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(630): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(630): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(637): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(637): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(644): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(644): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(662): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(662): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(662): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(671): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(671): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(671): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(694): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(694): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(716): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(716): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(738): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(738): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(760): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(760): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(836): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(836): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(843): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(843): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(850): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(850): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(857): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(857): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(877): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(877): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(877): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(887): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(887): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(887): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(911): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(911): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(933): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(933): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(955): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(955): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(977): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(977): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1053): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1053): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1060): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1060): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1067): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1067): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1074): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1074): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1095): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1095): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1095): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1106): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1106): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1106): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1131): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1131): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1153): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1153): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1175): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1175): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1197): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1197): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1273): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1273): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1280): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1280): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1287): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1287): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1294): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1294): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1317): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1317): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1317): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1329): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1329): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1329): warning C4309: 'initializing': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1355): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1355): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1377): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1377): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1399): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1399): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1421): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1421): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1497): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1497): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1504): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1504): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1511): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1511): warning C4309: '=': truncation of constant value
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1518): warning C4305: '=': truncation from 'int' to 'char'
+c:\users\jstemeye\documents\github\pttv3\pttv3\pttv3\pttv3.cpp(1518): warning C4309: '=': truncation of constant value
   PTTv3.vcxproj -> C:\Users\jstemeye\Documents\GitHub\PTTv3\PTTv3\x64\Debug\PTTv3.exe
   PTTv3.vcxproj -> C:\Users\jstemeye\Documents\GitHub\PTTv3\PTTv3\x64\Debug\PTTv3.pdb (Full PDB)

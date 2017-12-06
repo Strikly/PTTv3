@@ -42,7 +42,7 @@ void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/sof
 	font.cbSize = sizeof(font);
 	int fontSize = 15;
 	font.dwFontSize.Y = fontSize;
-	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &font);
+	
 
 	cout << endl;
 	cout << endl;
@@ -1522,25 +1522,27 @@ int main()
 		
 		int savedPoints = points;
 
-		while (contP && sel == 1)
-		{
-			cout << "Your score was: " << points << " points." << endl;
-			cout << "Enter your initials: ";
-			cin >> inputUsername;
-			usersList.push_back(inputUsername);
-			highscoresList.push_back(savedPoints);
-			nextLevel++;
-		}
+		
+		cout << "Your score was: " << points << " points." << endl;
+		cout << "Enter your initials: ";
+		cin >> inputUsername;
 
-		while (contP)
-		{
-			nextLevel = 1;
-			intro();
-			contP = false;
-		}
+		outFileUsers << endl << inputUsername;
+		outFileUsers2 << endl << savedPoints;
+
+		usersList.push_back(inputUsername);
+		highscoresList.push_back(savedPoints);
+		nextLevel++;
+		
+
+
+		nextLevel = 1;
+		intro();
+
 	}
 
-
+	outFileUsers.close();
+	outFileUsers2.close();
 	
 	cout << endl << "You're finished Buddy! " << endl << endl;
 

@@ -38,6 +38,12 @@ bool contP = true;
 void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/software/taag/
 {
 	system("Color 89");
+	CONSOLE_FONT_INFOEX font;
+	font.cbSize = sizeof(font);
+	int fontSize = 15;
+	font.dwFontSize.Y = fontSize;
+	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &font);
+
 	cout << endl;
 	cout << endl;
 	cout << endl;

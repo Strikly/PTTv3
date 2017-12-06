@@ -1,4 +1,3 @@
-
 // PTTs2.cpp : Defines the entry point for the console application.
 // Jared Stemeye
 // Rachel Adams
@@ -46,8 +45,8 @@ void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/sof
 	cout << endl;
 	cout << endl;
 	cout << endl;
-	cout << 
-	R"(                   _______  _________  _         _______     _______   _______   _______    _______  
+	cout <<
+		R"(                   _______  _________  _         _______     _______   _______   _______    _______  
 	          (       ) \__   __/ ( (    /| (  ____ \   (       ) (  ___  ) /  ___  )  ( ____  \ 
 	          | () () |    ) (    |  \  ( | | (    \/   | () () | | (   ) | \/   )  |  | (    \/
 	          | || || |    | |    |   \ | | | (__       | || || | | (___) |     /   )  | (__    
@@ -81,15 +80,15 @@ void intro() //Written by Rachel
 
 	while (sel == 0)
 	{
-		system("Color 08");
+		system("Color 89");
 		cout << endl;
-		cout << setw(66) << "Welcome To The Maze" << endl; //centered and bigger text, to add later. 
+		cout << setw(69) << "Welcome To The Maze" << endl; //centered and bigger text, to add later. 
 		cout << endl;
-		cout << setw(62) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
-		cout << setw(68) << "Press 1 to Start the Maze" << endl;
-		cout << setw(69) << "Press 2 to view High Scores" << endl;
-		cout << setw(74) << "Press 3 to view Intro and Instructions" << endl;
-		cout << setw(74) << "Press P to Exit the Program at any time." << endl;
+		cout << setw(65) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
+		cout << setw(71) << "Press 1 to Start the Maze" << endl;
+		cout << setw(72) << "Press 2 to view High Scores" << endl;
+		cout << setw(77) << "Press 3 to view Intro and Instructions" << endl;
+		cout << setw(77) << "Press P to Exit The Program At Any Time" << endl;
 		cin >> selection;
 		cout << endl;
 
@@ -110,7 +109,7 @@ void intro() //Written by Rachel
 			fileHighscores.open(highscoresFile);
 			int savedPoints = points;
 
-			cout << setw(65) << "TOP HIGH SCORES:" << endl;
+			cout << setw(64) << "TOP HIGH SCORES:" << endl;
 			if (fileUsers)
 			{
 				while (fileUsers >> user)
@@ -168,13 +167,13 @@ void intro() //Written by Rachel
 			cin >> selection;
 		}
 
-		if (selection == '4')
+		if (selection == '9')
 		{
 			//cout << "3";
 			//memeing it, memeing it so hard
 		}
 
-		while (selection != '1' && selection != '2' && selection != '3' && selection != '4')
+		while (selection != '1' && selection != '2' && selection != '3' && selection != '9')
 		{
 			cout << "That doesn't work, pick a valid option." << endl;
 			cin >> selection;
@@ -406,7 +405,8 @@ int main()
 	ofstream outFileUsers2("Highscores.txt", ios::app);
 	string inputUsername;
 	string user;
-	
+
+	system("Color 89");
 
 	titleScreen();
 

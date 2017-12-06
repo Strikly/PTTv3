@@ -421,7 +421,8 @@ int main()
 		cout << "LEVEL " << nextLevel << endl;
 		cout << "Total Points: " << points << endl;
 		cout << "Limbs: " << lives << "    Mine Count: " << mineNum << endl;
-
+		
+		cout << setw(50);
 		displayBoard(rows, cols, board);
 		
 		//cout << "r = " << r << " and c = " << c << endl;

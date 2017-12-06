@@ -33,6 +33,7 @@ using namespace std;
 
 int points = 0;
 int sel = 0;
+bool contP = true;
 
 void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/software/taag/
 {
@@ -77,8 +78,9 @@ void intro() //Written by Rachel
 	const int coin = 233;
 	const int bomb = 235;
 	char selection;
+	
 
-	while (sel == 0)
+	while (contP && sel == 0)
 	{
 		system("Color 89");
 		cout << endl;
@@ -92,7 +94,7 @@ void intro() //Written by Rachel
 		cin >> selection;
 		cout << endl;
 
-		if (selection == '1')
+		if (contP && selection == '1')
 		{
 			cout << "You Have Chosen Option 1!" << endl;
 			Sleep(1000);
@@ -100,7 +102,7 @@ void intro() //Written by Rachel
 			sel = 1;
 		}
 
-		if (selection == '2')
+		if (contP && selection == '2')
 		{
 			cout << "You Have Chosen Option 2!" << endl;
 			Sleep(1000);
@@ -143,7 +145,7 @@ void intro() //Written by Rachel
 			}
 		}
 
-		if (selection == '3')
+		if (contP && selection == '3')
 		{
 			cout << "Welcome to The Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
 			cout << "Maybe, maybe not." << endl;
@@ -166,14 +168,19 @@ void intro() //Written by Rachel
 
 			cin >> selection;
 		}
+		else if (contP && sel == 'p' || sel == 'P');
+		{
 
-		if (selection == '9')
+			contP = false;
+		}
+
+		if (contP && selection == '9')
 		{
 			//cout << "3";
 			//memeing it, memeing it so hard
 		}
 
-		while (selection != '1' && selection != '2' && selection != '3' && selection != '9')
+		while (contP && selection != '1' && selection != '2' && selection != '3' && selection != '9')
 		{
 			cout << "That doesn't work, pick a valid option." << endl;
 			cin >> selection;
@@ -1509,7 +1516,7 @@ int main()
 		
 		int savedPoints = points;
 
-		while (sel == 1)
+		while (contP && sel == 1)
 		{
 			cout << "Your score was: " << points << " points." << endl;
 			cout << "Enter your initials: ";
@@ -1517,10 +1524,14 @@ int main()
 			usersList.push_back(inputUsername);
 			highscoresList.push_back(savedPoints);
 			nextLevel++;
-			sel = 0;
 		}
 
-		nextLevel = 1;
+		while (contP)
+		{
+			nextLevel = 1;
+			intro();
+			contP = false;
+		}
 	}
 
 

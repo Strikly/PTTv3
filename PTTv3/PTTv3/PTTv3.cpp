@@ -37,11 +37,6 @@ int sel = 0;
 void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/software/taag/
 {
 	system("Color 89");
-	CONSOLE_FONT_INFOEX font;
-	font.cbSize = sizeof(font);
-	int fontSize = 15;
-	font.dwFontSize.Y = fontSize;
-	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &font);
 
 	cout << endl;
 	cout << endl;
@@ -92,8 +87,8 @@ void intro() //Written by Rachel
 		cout << endl;
 		cout << setw(65) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
 		cout << setw(71) << "Press 1 to Start the Maze" << endl;
-		cout << setw(72) << "Press 2 to view High Scores" << endl;
-		cout << setw(77) << "Press 3 to view Intro and Instructions" << endl;
+		cout << setw(72) << "Press 2 to View High Scores" << endl;
+		cout << setw(77) << "Press 3 to View Intro and Instructions" << endl;
 		cout << setw(77) << "Press P to Exit The Program At Any Time" << endl;
 		cin >> selection;
 		cout << endl;
@@ -101,7 +96,7 @@ void intro() //Written by Rachel
 		if (selection == '1')
 		{
 			cout << "You Have Chosen Option 1!" << endl;
-			Sleep(1000);
+			Sleep(900);
 			system("CLS");
 			sel = 1;
 		}
@@ -109,13 +104,14 @@ void intro() //Written by Rachel
 		if (selection == '2')
 		{
 			cout << "You Have Chosen Option 2!" << endl;
-			Sleep(1000);
+			Sleep(900);
 			system("CLS");
 			fileUsers.open(usersFile);
 			fileHighscores.open(highscoresFile);
 			int savedPoints = points;
 
-			cout << setw(64) << "TOP HIGH SCORES:" << endl;
+			cout << setw(67) << "TOP HIGH SCORES:" << endl;
+			cout << endl;
 			if (fileUsers)
 			{
 				while (fileUsers >> user)
@@ -145,7 +141,7 @@ void intro() //Written by Rachel
 
 			for (int i = 0; i < 5; i++)
 			{
-				cout << setw(53) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
+				cout << setw(56) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
 			}
 		}
 

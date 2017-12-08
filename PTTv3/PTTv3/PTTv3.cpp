@@ -34,12 +34,9 @@
 using namespace std;
 
 int points = 0;
-int sel = 0;
-int sel2 = 0;
-bool contP = true;
 
 void titleScreen();
-void intro();
+int intro();
 void displayBoard(int rows, int cols, char board[5][5]);
 void displayBoard2(int rows, int cols, char board[6][6]);
 void displayBoard3(int rows, int cols, char board[7][7]);
@@ -63,6 +60,10 @@ int main()
 	int inc = 0, inc2 = 0;
 	char input;
 	bool contP = true;
+	bool play = true;
+	int sel = 0;
+	int sel2 = 0;
+
 	ifstream fileUsers;
 	ifstream fileHighscores;
 	string usersFile = "Users.txt";
@@ -77,8 +78,17 @@ int main()
 	system("Color 89");
 
 	titleScreen();
-	intro();
 
+	while (contP && play)
+	{
+		contP = true;
+		lives = 10;
+		nextLevel = 1;
+		points = 0;
+		
+		sel = intro();
+
+	
 	//===================================== Level 1 ========================================================================== Coded by Jared, Adam and Rachel.
 	while (contP && lives > 0 && nextLevel == 1 && sel == 1)
 	{
@@ -219,6 +229,7 @@ int main()
 			else if (input == 'm' || input == 'M')
 			{
 				nextLevel = 0;
+				sel = 0;
 				intro();
 			}
 			else
@@ -1089,7 +1100,7 @@ int main()
 					board5[r][c] = (char)player;
 				}
 			}
-			else if (input == 'p' || input == 'p')
+			else if (input == 'p' || input == 'P')
 			{
 				contP = false;
 			}
@@ -1188,9 +1199,9 @@ int main()
 		usersList.push_back(inputUsername);
 		highscoresList.push_back(savedPoints);
 		
-		intro();
+		
 	}
-	
+	}
 	outFileUsers.close();
 	outFileUsers2.close();
 	cout << endl << "You're finished Buddy! " << endl << endl;
@@ -1228,7 +1239,7 @@ void titleScreen() // Added by Jared. ASCII art generated using: patorjk.com/sof
 	system("cls");
 }
 
-void intro() //Written by Rachel
+int intro() //Written by Rachel
 
 {
 	// Borrowed ifstream variables from CIS150_FileReadingForGames by Prof. Moore. - Jared
@@ -1241,10 +1252,12 @@ void intro() //Written by Rachel
 	vector<int>    highscoresList;
 	const int coin = 233;
 	const int bomb = 235;
-	char selection;
+	int selection = 0;
+	//int sel = 0;
+	bool contP = true;
 
 
-	while (contP && sel == 0)
+	while (contP && selection == 0)
 	{
 		system("Color 89");
 		cout << endl;
@@ -1255,20 +1268,21 @@ void intro() //Written by Rachel
 		cout << setw(72) << "Press 2 to View High Scores" << endl;
 		cout << setw(77) << "Press 3 to View Intro and Instructions" << endl;
 		cout << setw(77) << "Press P to Exit The Program At Any Time" << endl;
-		cout << "Enter your selection: ";
+		cout << endl << setw(69) << "Enter your selection: ";
 		cin >> selection;
 		cout << endl;
 
-		if (contP && selection == '1')
+		if (contP && selection == 1)
 		{
 			cout << "You Have Chosen Option 1!" << endl;
-			sel = 1;
+			selection = 1;
 			Sleep(900);
 			system("CLS");
+			return selection;
 			
 		}
 
-		while (contP && selection == '2')
+		if (contP && selection == 2)
 		{
 			cout << "You Have Chosen Option 2!" << endl;
 			Sleep(900);
@@ -1277,7 +1291,7 @@ void intro() //Written by Rachel
 			fileHighscores.open(highscoresFile);
 			int savedPoints = points;
 
-			cout << setw(67) << "TOP HIGH SCORES:" << endl;
+			cout << setw(68) << "TOP HIGH SCORES:" << endl;
 			cout << endl;
 			if (fileUsers)
 			{
@@ -1309,13 +1323,14 @@ void intro() //Written by Rachel
 			for (int i = 0; i < 5; i++)
 			{
 				cout << setw(56) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
-			}
-			cout << setw(56) << "Enter your selection: ";
-			cin >> selection;
+			}			
 		}
 
-		while (contP && selection == '3')
+		else if (contP && selection == 3)
 		{
+			cout << "You Have Chosen Option 3!" << endl;
+			Sleep(900);
+			system("CLS");
 			cout << "Welcome to Mine Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
 			cout << "Maybe, maybe not." << endl;
 			cout << "You see, there will be obstacles in your way, ones that might be invisible. Well, yeah, they're invisible." << endl;
@@ -1333,23 +1348,21 @@ void intro() //Written by Rachel
 			cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
 			cout << endl;
 			cout << "Watch out for those bombs, and Good Luck!" << endl;
-			cout << endl;
-			cout << "Enter your selection: ";
-			cin >> selection;
+			cout << endl;		
 		}
-		while (contP && selection == 'p' || selection == 'P');
+		if (contP && selection == 'p' || selection == 'P');
 		{
-
 			contP = false;
+			selection = -1;
 		}
 
-		while (contP && selection != '1' && selection != '2' && selection != '3' && selection != '9')
+		if (contP && selection != 1 && selection != 2 && selection != 3 && selection != 'p' && selection != 'P')
 		{
 			cout << "That doesn't work, pick a valid option." << endl;
 			cin >> selection;
 		}
 	}
-
+	
 }
 
 // displayBoard (Jared and Adam)

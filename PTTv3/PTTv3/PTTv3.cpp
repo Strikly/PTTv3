@@ -11,13 +11,15 @@
 // maze and number of items increases.
 
 //Notes:
-//10 levels in difficulty, more bombs and more coins, set bomb spawn points per level so we have a kay map to use
+//5 levels, larger board, more bombs and more coins, set bomb spawn points per level so we have a kay map to use
 //level 1: 5x5 maze, 2 bombs, 1 coin
 //level 2: exponential increasing, number of bombs = number of coins, bomb ratio is 3 boms to 1 coin
 //bombs are not displayed to user, but the number of bombs will be told to the user
 //pro level: coin surrounded by bombs except on one side, one way in one way out
 //potentially bombs moving with every user move
 //text file: saving player names and scores in a text file, old school arcade style high score list
+
+//**************QUICK LEVEL RUN. COPY AND PASTE INTO GAME MOVE: ssddssddsssdsddwddsssssddwdssssdddsssssdssddddddsddasssdssssdddddwwdss
 
 
 #include "stdafx.h"
@@ -33,6 +35,7 @@ using namespace std;
 
 int points = 0;
 int sel = 0;
+int sel2 = 0;
 bool contP = true;
 
 void titleScreen();
@@ -57,7 +60,7 @@ int main()
 	int lives = 10;
 	int moveCount;
 	int nextLevel = 1;
-	int inc = 0;
+	int inc = 0, inc2 = 0;
 	char input;
 	bool contP = true;
 	ifstream fileUsers;
@@ -74,16 +77,10 @@ int main()
 	system("Color 89");
 
 	titleScreen();
-
-	while (sel == 0)
-	{
-		contP = true;
-		intro();
-	}
-	
+	intro();
 
 	//===================================== Level 1 ========================================================================== Coded by Jared, Adam and Rachel.
-	while (contP && sel == 1)
+	while (contP && lives > 0 && nextLevel == 1 && sel == 1)
 	{
 		moveCount = 15;
 		int r = 0, c = 0;
@@ -91,6 +88,7 @@ int main()
 		const int rows = 5;
 		const int cols = 5;
 		int arraySize = rows*cols;
+		nextLevel = 1;
 
 		// Parallel arrays build. Jared.
 		char bombBoard[rows][cols] = {
@@ -218,6 +216,11 @@ int main()
 			{
 				contP = false;
 			}
+			else if (input == 'm' || input == 'M')
+			{
+				nextLevel = 0;
+				intro();
+			}
 			else
 			{
 				cout << "Invalid input. " << endl;
@@ -295,7 +298,6 @@ int main()
 				board[r][c] = (char)player;
 				board[r][c + 1] = '  ';
 			}
-
 		}
 		//=================================================== Level 2 ==========================================================
 		moveCount = 20;
@@ -1124,7 +1126,7 @@ int main()
 					system("cls");
 					cout << "You reached the end with " << lives << " limbs attached!" << endl;
 					cout << "Total points: " << points << endl;
-					Sleep(4000);
+					Sleep(3000);
 					system("CLS");
 					while (r > 0)
 					{
@@ -1169,12 +1171,13 @@ int main()
 					board5[r][c] = (char)player;
 					board5[r][c + 1] = '  ';
 				}
-			}
+			}		
 		}
-		
+
 		int savedPoints = points;
 
-		
+
+
 		cout << "Your score was: " << points << " points." << endl;
 		cout << "Enter your initials: ";
 		cin >> inputUsername;
@@ -1184,20 +1187,13 @@ int main()
 
 		usersList.push_back(inputUsername);
 		highscoresList.push_back(savedPoints);
-		nextLevel++;
 		
-
-
-		nextLevel = 1;
 		intro();
-
 	}
-
+	
 	outFileUsers.close();
 	outFileUsers2.close();
-	
 	cout << endl << "You're finished Buddy! " << endl << endl;
-
 
 	system("pause");
 	return 0;
@@ -1252,25 +1248,27 @@ void intro() //Written by Rachel
 	{
 		system("Color 89");
 		cout << endl;
-		cout << setw(69) << "Welcome To The Maze" << endl; //centered and bigger text, to add later. 
+		cout << setw(69) << "Welcome To Mine Maze" << endl; //centered and bigger text, to add later. 
 		cout << endl;
 		cout << setw(65) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
 		cout << setw(71) << "Press 1 to Start the Maze" << endl;
 		cout << setw(72) << "Press 2 to View High Scores" << endl;
 		cout << setw(77) << "Press 3 to View Intro and Instructions" << endl;
 		cout << setw(77) << "Press P to Exit The Program At Any Time" << endl;
+		cout << "Enter your selection: ";
 		cin >> selection;
 		cout << endl;
 
 		if (contP && selection == '1')
 		{
 			cout << "You Have Chosen Option 1!" << endl;
+			sel = 1;
 			Sleep(900);
 			system("CLS");
-			sel = 1;
+			
 		}
 
-		if (contP && selection == '2')
+		while (contP && selection == '2')
 		{
 			cout << "You Have Chosen Option 2!" << endl;
 			Sleep(900);
@@ -1312,41 +1310,37 @@ void intro() //Written by Rachel
 			{
 				cout << setw(56) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
 			}
+			cout << setw(56) << "Enter your selection: ";
+			cin >> selection;
 		}
 
-		if (contP && selection == '3')
+		while (contP && selection == '3')
 		{
-			cout << "Welcome to The Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
+			cout << "Welcome to Mine Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
 			cout << "Maybe, maybe not." << endl;
 			cout << "You see, there will be obstacles in your way, ones that might be invisible. Well, yeah, they're invisible." << endl;
 			cout << "They're bombs. " << (char)bomb << endl;
 			cout << "Oops." << endl;
 			cout << endl;
-			cout << "The good news though, is that there are non-invisible coins to make your journey worthwhile." << endl;
+			cout << "The good news though, is that there are coins on the map to make your journey worthwhile." << endl;
 			cout << "For every coin you collect, 100 points are added to your score. " << (char)coin << endl;
 			cout << endl;
 			cout << "Speaking of scores, taking less steps can also help you out. Make a lot of unnessary moves and your score" << endl;
 			cout << "might not be as high as you'd like it. Be efficient and collect your coins and you might just find your name" << endl;
-			cout << "on our high score list.";
+			cout << "on our high score list!";
 			cout << endl;
 			cout << endl;
 			cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
 			cout << endl;
 			cout << "Watch out for those bombs, and Good Luck!" << endl;
 			cout << endl;
-
+			cout << "Enter your selection: ";
 			cin >> selection;
 		}
-		else if (contP && sel == 'p' || sel == 'P');
+		while (contP && selection == 'p' || selection == 'P');
 		{
 
 			contP = false;
-		}
-
-		if (contP && selection == '9')
-		{
-			//cout << "3";
-			//memeing it, memeing it so hard
 		}
 
 		while (contP && selection != '1' && selection != '2' && selection != '3' && selection != '9')

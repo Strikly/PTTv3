@@ -145,6 +145,7 @@ int main()
 				if (bombBoard[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard[r][c] = 'd';
 				}
@@ -167,6 +168,7 @@ int main()
 				if (bombBoard[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard[r][c] = 'd';
 				}
@@ -189,6 +191,7 @@ int main()
 				if (bombBoard[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard[r][c] = 'd';
 				}
@@ -211,6 +214,7 @@ int main()
 				if (bombBoard[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard[r][c] = 'd';
 				}
@@ -239,6 +243,7 @@ int main()
 			if (bombBoard[r][c] == 'x')
 			{
 				lives--;
+				mineNum--;
 				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 			}
 			if (moveCount <= 0)
@@ -362,6 +367,7 @@ int main()
 				if (bombBoard2[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard2[r][c] = 'd';
 				}
@@ -384,6 +390,7 @@ int main()
 				if (bombBoard2[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard2[r][c] = 'd';
 				}
@@ -406,6 +413,7 @@ int main()
 				if (bombBoard2[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard2[r][c] = 'd';
 				}
@@ -428,6 +436,7 @@ int main()
 				if (bombBoard2[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard2[r][c] = 'd';
 				}
@@ -450,6 +459,7 @@ int main()
 			if (bombBoard2[r][c] == 'x')
 			{
 				lives--;
+				mineNum--;
 				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 			}
 			if (moveCount <= 0)
@@ -579,6 +589,7 @@ int main()
 				if (bombBoard3[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard3[r][c] = 'd';
 				}
@@ -601,6 +612,7 @@ int main()
 				if (bombBoard3[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard3[r][c] = 'd';
 				}
@@ -623,6 +635,7 @@ int main()
 				if (bombBoard3[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard3[r][c] = 'd';
 				}
@@ -645,6 +658,7 @@ int main()
 				if (bombBoard3[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard3[r][c] = 'd';
 				}
@@ -667,6 +681,7 @@ int main()
 			if (bombBoard3[r][c] == 'x')
 			{
 				lives--;
+				mineNum--;
 				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 			}
 			if (moveCount <= 0)
@@ -799,6 +814,7 @@ int main()
 				if (bombBoard4[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard4[r][c] = 'd';
 				}
@@ -821,6 +837,7 @@ int main()
 				if (bombBoard4[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard4[r][c] = 'd';
 				}
@@ -843,6 +860,7 @@ int main()
 				if (bombBoard4[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard4[r][c] = 'd';
 				}
@@ -865,6 +883,7 @@ int main()
 				if (bombBoard4[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard4[r][c] = 'd';
 				}
@@ -887,6 +906,7 @@ int main()
 			if (bombBoard4[r][c] == 'x')
 			{
 				lives--;
+				mineNum--;
 				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 			}
 			if (moveCount <= 0)
@@ -1023,6 +1043,7 @@ int main()
 				if (bombBoard5[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard5[r][c] = 'd';
 				}
@@ -1045,6 +1066,7 @@ int main()
 				if (bombBoard5[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard5[r][c] = 'd';
 				}
@@ -1067,6 +1089,7 @@ int main()
 				if (bombBoard5[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard5[r][c] = 'd';
 				}
@@ -1089,6 +1112,7 @@ int main()
 				if (bombBoard5[r][c] == 'x')
 				{
 					lives--;
+					mineNum--;
 					cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 					bombBoard5[r][c] = 'd';
 				}
@@ -1111,6 +1135,7 @@ int main()
 			if (bombBoard5[r][c] == 'x')
 			{
 				lives--;
+				mineNum--;
 				cout << "You hit a mine! Limb lost! " << endl << lives << " left! " << endl;
 			}
 			if (moveCount <= 0)
@@ -1252,6 +1277,7 @@ int intro() //Written by Rachel
 	vector<int>    highscoresList;
 	const int coin = 233;
 	const int bomb = 235;
+	const int player = 206;
 	int selection = 0;
 	//int sel = 0;
 	bool contP = true;
@@ -1264,10 +1290,10 @@ int intro() //Written by Rachel
 		cout << setw(69) << "Welcome To Mine Maze" << endl; //centered and bigger text, to add later. 
 		cout << endl;
 		cout << setw(65) << "Menu Options" << endl; //centered and slightly bigger text, classic video game style
-		cout << setw(71) << "Press 1 to Start the Maze" << endl;
-		cout << setw(72) << "Press 2 to View High Scores" << endl;
-		cout << setw(77) << "Press 3 to View Intro and Instructions" << endl;
-		cout << setw(77) << "Press P to Exit The Program At Any Time" << endl;
+		cout << setw(71) << "Enter 1 to Start the Maze" << endl;
+		cout << setw(72) << "Enter 2 to View High Scores" << endl;
+		cout << setw(75) << "Enter 3 to View the Instructions" << endl;
+		cout << setw(77) << "Enter P to Exit The Program At Any Time" << endl;
 		cout << endl << setw(69) << "Enter your selection: ";
 		cin >> selection;
 		cout << endl;
@@ -1291,7 +1317,7 @@ int intro() //Written by Rachel
 			fileHighscores.open(highscoresFile);
 			int savedPoints = points;
 
-			cout << setw(68) << "TOP HIGH SCORES:" << endl;
+			cout << setw(67) << "TOP HIGH SCORES:" << endl;
 			cout << endl;
 			if (fileUsers)
 			{
@@ -1320,9 +1346,9 @@ int intro() //Written by Rachel
 			}
 
 
-			for (int i = 0; i < 5; i++)
+			for (int i = 0; i < 10; i++)
 			{
-				cout << setw(56) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl << endl;
+				cout << setw(55) << usersList.at(i) << setw(10) << highscoresList.at(i) << endl;
 			}			
 		}
 
@@ -1331,23 +1357,25 @@ int intro() //Written by Rachel
 			cout << "You Have Chosen Option 3!" << endl;
 			Sleep(900);
 			system("CLS");
-			cout << "Welcome to Mine Maze! The obvective is to get from the enterance to the exit alive. Sound simple, right?" << endl;
-			cout << "Maybe, maybe not." << endl;
-			cout << "You see, there will be obstacles in your way, ones that might be invisible. Well, yeah, they're invisible." << endl;
-			cout << "They're bombs. " << (char)bomb << endl;
-			cout << "Oops." << endl;
+			cout << setw(100) << "The objective of Mine Maze is to get from the entrance to the exit alive." << endl << endl;
+			cout << setw(68) << "This is you --> " << (char)player << endl;
+			cout << setw(74) << "Use WASD to move your player:" << endl;
+			cout << setw(100) << "W will take you up, S will take you down, A and D will take you left and right." << endl;
 			cout << endl;
-			cout << "The good news though, is that there are coins on the map to make your journey worthwhile." << endl;
-			cout << "For every coin you collect, 100 points are added to your score. " << (char)coin << endl;
+			cout << setw(80) << "There are concealed mines on each level. " << endl;
+			cout << setw(90) << "If your player come into contact with a mine, a limb is lost." << endl;
+			cout << setw(77) << "Lose all limbs and the game is over." << endl;
 			cout << endl;
-			cout << "Speaking of scores, taking less steps can also help you out. Make a lot of unnessary moves and your score" << endl;
-			cout << "might not be as high as you'd like it. Be efficient and collect your coins and you might just find your name" << endl;
-			cout << "on our high score list!";
+			cout << setw(105) << "The good news though, is that there are coins on the map to make your journey worthwhile." << endl;
+			cout << setw(46) << "For every coin (" << char(coin) << ") you collect, 100 points is added to your score. " << endl;
+			cout << endl;
+			cout << setw(100) << "Speaking of scores, paying attention to your Moves Left can also help you out. " << endl;
+			cout << setw(95) << "Be efficient and collect your coins and you might just find your name" << endl;
+			cout << setw(70) << "on our high score list!";
 			cout << endl;
 			cout << endl;
-			cout << "Use WASD to move: W will take you up, S will take you down, A and D will take you left and right." << endl;
-			cout << endl;
-			cout << "Watch out for those bombs, and Good Luck!" << endl;
+			
+			cout << setw(80) << "Watch out for those mines, and Good Luck!" << endl;
 			cout << endl;		
 		}
 		if (contP && selection == 'p' || selection == 'P');
@@ -1362,7 +1390,6 @@ int intro() //Written by Rachel
 			cin >> selection;
 		}
 	}
-	
 }
 
 // displayBoard (Jared and Adam)

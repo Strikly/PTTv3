@@ -1209,7 +1209,11 @@ int main()
 				}
 			}		
 		}
-
+		
+		
+	}
+	if (contP)
+	{
 		int savedPoints = points;
 
 
@@ -1223,8 +1227,6 @@ int main()
 
 		usersList.push_back(inputUsername);
 		highscoresList.push_back(savedPoints);
-		
-		
 	}
 	}
 	outFileUsers.close();

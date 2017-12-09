@@ -5,10 +5,11 @@
 //=======
 //CIS150-01 - Team Purple Turtle Turtles
 //Start date: 11/12/2017
-//Description: This game is designed to create a maze for the user to run through. The maze walls will be invisibile, and the
-// user has the posibility of running into bombs that will end their life and extra lifes which will add an addition life
-// to their life counter. Finishing the first level will allow the user to move On to the next level!, where the size of the
-// maze and number of items increases.
+//Description: 
+// This game is designed to create a maze for the user to run through. The user has the possibility of
+// running into concealed mines that will force a 'limb' loss. Moves grant points, and extra points are rewarded for collecting coins 
+// on each level. Finishing each level will allow the user to move on to the next level, where the size of the maze and number of mines/ coins increase.
+// Scores and names are saved in a .txt file. High scores are displayed in-game.
 
 //Notes:
 //5 levels, larger board, more bombs and more coins, set bomb spawn points per level so we have a kay map to use

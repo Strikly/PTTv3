@@ -19,8 +19,8 @@
 //pro level: coin surrounded by bombs except on one side, one way in one way out
 //potentially bombs moving with every user move
 //text file: saving player names and scores in a text file, old school arcade style high score list
-
-//**************QUICK LEVEL RUN. COPY AND PASTE INTO GAME MOVE: ssddssddsssdsddwddsssssddwdssssdddsssssdssddddddsddasssdssssdddddwwdss
+//                                                                          | COPY FROM s AFTER LEVEL 1 PLAYTHROUGH  | STOP COPY @ d TO PLAY LEVEL 5
+//**************QUICK FULL LEVEL RUN. COPY AND PASTE INTO GAME MOVE: ssddssddsssdsddwddsssssddwdssssdddsssssdssddddddsddasssdssssdddddwwdss
 
 
 #include "stdafx.h"
@@ -65,7 +65,7 @@ int main()
 	int sel = 0;
 	int sel2 = 0;
 	int levelDiff;
-
+	// Variables borrowed from CIS150_FileReadingForGames by Prof. Moore. - Jared
 	ifstream fileUsers;
 	ifstream fileHighscores;
 	string usersFile = "Users.txt";
@@ -1267,6 +1267,10 @@ int main()
 			cout << "Your score was: " << points << " points." << endl;
 			cout << "Enter your initials: ";
 			cin >> inputUsername;
+			Sleep(500);
+			cout << endl << "SCORE SAVED! " << endl;
+			Sleep(1000);
+			system("cls");
 
 			outFileUsers << endl << inputUsername;
 			outFileUsers2 << endl << savedPoints;

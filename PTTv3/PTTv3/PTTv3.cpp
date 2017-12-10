@@ -64,6 +64,7 @@ int main()
 	bool play = true;
 	int sel = 0;
 	int sel2 = 0;
+	int levelDiff;
 
 	ifstream fileUsers;
 	ifstream fileHighscores;
@@ -86,10 +87,56 @@ int main()
 		lives = 10;
 		nextLevel = 1;
 		points = 0;
-		
+
 		sel = intro();
 
-	
+		while (contP && sel == 1 && lives == 10)
+		{
+			sel = intro();
+			cout << setw(60) << "1:   EASY" << endl;
+			cout << setw(61) << "2:  MEDIUM" << endl;
+			cout << setw(60) << "3:   HARD" << endl;
+			cout << setw(62) << "0: GOD MODE" << endl;
+			cout << setw(70) << endl << "Choose Your Difficulty: ";
+			cin >> levelDiff;
+
+			if (levelDiff == 1)
+			{
+				lives = 8;
+				cout << setw(50) << "You have " << lives << " limbs. You are the Spider!";
+				Sleep(2500);
+				system("cls");
+			}
+			else if (levelDiff == 2)
+			{
+				lives = 6;
+				cout << setw(50) << "You have " << lives << " limbs. You are the Grasshopper!";
+				Sleep(2500);
+				system("cls");
+			}
+			else if (levelDiff == 3)
+			{
+				lives = 4;
+				cout << setw(50) << "You have " << lives << " limbs. You are the Human!";
+				Sleep(2500);
+				system("cls");
+			}
+			else if (levelDiff == 0)
+			{
+				lives = 9999;
+				cout << setw(50) << "You have " << lives << " limbs. You are a God!";
+				Sleep(2500);
+				system("cls");
+			}
+			else
+			{
+				lives = 0;
+				cout << setw(65) << "Invalid input!" << endl;
+				
+			}
+
+		}
+
 	//===================================== Level 1 ========================================================================== Coded by Jared, Adam and Rachel.
 	while (contP && lives > 0 && nextLevel == 1 && sel == 1)
 	{
@@ -1211,24 +1258,24 @@ int main()
 			}		
 		}
 		
-		
+		if (contP)
+		{
+			int savedPoints = points;
+
+
+
+			cout << "Your score was: " << points << " points." << endl;
+			cout << "Enter your initials: ";
+			cin >> inputUsername;
+
+			outFileUsers << endl << inputUsername;
+			outFileUsers2 << endl << savedPoints;
+
+			usersList.push_back(inputUsername);
+			highscoresList.push_back(savedPoints);
+		}
 	}
-	if (contP)
-	{
-		int savedPoints = points;
 
-
-
-		cout << "Your score was: " << points << " points." << endl;
-		cout << "Enter your initials: ";
-		cin >> inputUsername;
-
-		outFileUsers << endl << inputUsername;
-		outFileUsers2 << endl << savedPoints;
-
-		usersList.push_back(inputUsername);
-		highscoresList.push_back(savedPoints);
-	}
 	}
 	outFileUsers.close();
 	outFileUsers2.close();
